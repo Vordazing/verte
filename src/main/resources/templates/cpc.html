@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cpc.css}"/>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>-->
+
+    <script rel="stylesheet" type="text/javascript" th:src="@{/webjars/gsap/dist/gsap.js}"></script>
+
+    <!--<script rel="stylesheet" type="text/javascript" th:src="@{/webjars/gsap/all.js}"></script>-->
+
+</head>
+
+<body>
+<div class="page-wrap">
+    <header class="page-header">
+
+        <nav>
+            <h1>Fli Trip | Travel</h1>
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <article id="hero-1" style="--i: 5">
+                <div class="hero-info">
+                    <h2>Путешествуйте по</h2>
+                    <h1>Миру</h1>
+                    <h3>Прагсер-Вильдзее, Италия</h3>
+                </div>
+                <div class="hero-image hi-1"></div>
+            </article>
+
+            <article id="hero-2" style="--i: 4">
+                <div class="hero-info">
+                    <h2>Наслаждайтесь</h2>
+                    <h1>Путешествиями</h1>
+                    <h3>Маринье, Франция</h3>
+                </div>
+                <div class="hero-image hi-2"></div>
+
+            </article>
+
+            <article id="hero-3" style="--i: 3">
+                <div class="hero-info">
+                    <h2>Расширьте Свои</h2>
+                    <h1>Горизонты</h1>
+                    <h3>Трасса Хукер-Вэлли, Новая Зеландия</h3>
+                </div>
+                <div class="hero-image hi-3"></div>
+
+            </article>
+
+            <article id="hero-4" style="--i: 2">
+                <div class="hero-info">
+                    <h2>Исследуйте и</h2>
+                    <h1>Прочувствуйте</h1>
+                    <h3>Дольмиты, Италия</h3>
+                </div>
+                <div class="hero-image hi-4"></div>
+
+            </article>
+
+            <article id="hero-5" style="--i: 1">
+                <div class="hero-info">
+                    <h2>Измените Свои</h2>
+                    <h1>Перспективы</h1>
+                    <h3>Пхукет, Таиланд</h3>
+                </div>
+                <div class="hero-image hi-5"></div>
+            </article>
+        </main>
+
+    </header>
+
+    <section>
+        <ul class="level-1">
+            <li>
+                <h3>Направление</h3>
+                <ul class="level-2">
+                    <li>
+                        <p>Asia</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Europe</p>
+                        <ul class="level-3">
+                            <li>Россия</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Africa</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>North America</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>South America</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Советы путешественникам</h3>
+                <ul>
+                    <li>Совет 1</li>
+                    <li>Совет 2</li>
+                    <li>Совет 3</li>
+                    <li>Совет 4</li>
+                    <li>Совет 5</li>
+                </ul>
+                <p><small>Больше советов...</small></p>
+            </li>
+            <li>
+                <h3>Ресурсы</h3>
+                <ul>
+                    <li>Личный кабинет </li>
+                    <li><a href="/write"  > Добавить место </a> </li>
+                    <li>Ресурсы 3 </li>
+                </ul>
+                <p><small>Больше ресурсов...</small></p>
+            </li>
+            <li>
+                <h3>О нас</h3>
+                <ul>
+                    <li><a href="/team"  > Team </a> </li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Telegram</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+<script rel="stylesheet" type="text/javascript" th:src="@{/js/cpc.js}"></script>
+
+</body>
+</html>

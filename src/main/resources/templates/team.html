@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/team.css}"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+    <h1>Our Team</h1>
+    <div class="team">
+        <div class="team_member">
+            <div class="team_img">
+                <img th:src="@{/img/alexey.png}" alt="Team_image"/>
+
+            </div>
+            <h3>Алексей</h3>
+            <p class="role">developer</p>
+            <p>Никогда не рано спросить себя: делом я занимаюсь или пустяками?</p>
+        </div>
+        <div class="team_member">
+            <div class="team_img">
+                <img th:src="@{/img/danya2.png}" alt="Team_image"/>
+            </div>
+            <h3>Даниэль</h3>
+            <p class="role">UI developer</p>
+            <p>Ничего не бывает случайного, всё имеет первопричину.</p></div>
+        <div class="team_member">
+            <div class="team_img">
+                <img th:src="@{/img/mirea.png}" alt="Team_image"/>
+            </div>
+            <h3>РТУ МИРЭА</h3>
+            <p class="role">Support Lead</p>
+            <p>Каждый хочет изменить человечество, но никто не задумывается о том, как изменить себя</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
