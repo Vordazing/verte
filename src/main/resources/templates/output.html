@@ -5,25 +5,38 @@
     <title>Output</title>
 </head>
 <body>
-<table>
-    <thead>
-        <tr>
-            <th>Локация</th>
-            <th>Достопримечательность</th>
-            <th>Название</th>
-            <th>Описание</th>
-        </tr>
-    </thead>
 
-    <tbody>
-        <tr th:each="output : ${outputList}">
-            <td th:text="${output.location}"> </td>
-            <td th:text="${output.name_of_the_geographical_object}"> </td>
-            <td th:text="${output.name}"> </td>
-            <td th:text="${output.description}"> </td>
+    <head>
+        <div>
+            <h>Локация</h>
+            <h>Достопримечательность</h>
+            <h>Название</h>
+            <h>Описание</h>
+        <div/>
+    </head>
+
+    <body>
+        <tr th:each="region : ${regionList}">
+            <div th:if="${region.cityList.size != 0}">
+                <div th:each="city : ${region.cityList}">
+
+                    <div th:if="${city.outputList.size != 0}">
+                        <div th:each="output : ${city.outputList}">
+                            <div th:text="${region.regions}"></div>
+                            <div th:text="${city.cities}"> </div>
+                            <div th:if="${output.geographicalObject != null}">
+                                 <div th:text="${output.geographicalObject.geographicalObjectList}"></div>
+                            </div>
+                            <div th:text="${output.name}"> </div>
+                            <div th:text="${output.description}"> </div>
+                            <a th:href="@{'/output/' + ${output.idOutput} + '/delete'}"><button type="button">Delete</button></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </tr>
-    </tbody>
-</table>
+    </body>
 
 
 </body>

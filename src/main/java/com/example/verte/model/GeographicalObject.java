@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,6 +19,12 @@ public class GeographicalObject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_geographical_object;
-    private String geographical_object_list;
+    private Long idGeographicalObject;
+    private String geographicalObjectList;
+
+
+    @OneToMany
+    @JoinColumn(name = "name_of_the_geograp_hical_object_id")
+    private List<Output> outputList;
+
 }

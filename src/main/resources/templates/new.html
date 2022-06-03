@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+</head>
+    <body>
+    <form th:action="@{/output/new}" th:object="${output}" method="post"> <!--output.name или * -->
+
+        <label>region:</label>
+
+        <select name ="Region">
+            <option th:each="region: ${regionList}" th:value = "${region.idRegion}" th:text="${region.regions}"></option>
+        </select>
+        <br/><br/>
+
+        <label>city:</label>
+        <select name ="City">
+            <option th:each="city: ${cityList}" th:value = "${city.idCity}" th:text="${city.cities}"></option>
+        </select>
+        <br/><br/>
+
+        <label>g:</label>
+        <select name ="geographicalObject">
+            <option th:each="object: ${geographicalObjectList}" th:value = "${object.idGeographicalObject}" th:text="${object.geographicalObjectList}"></option>
+        </select>
+        <br/><br/>
+
+        <label>name:</label>
+        <input type="text"  th:field="*{name}">
+        <br/><br/>
+
+        <label>description:</label>
+        <input type="text" th:field="*{description}">
+        <br/><br/>
+
+        <button type="submit">ADD</button>
+    </form>
+    </body>
+</html>

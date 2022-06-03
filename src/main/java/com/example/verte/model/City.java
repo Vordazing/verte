@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,9 +18,14 @@ public class City {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_city;
+    private Long idCity;
     private String cities;
+    @Column(name = "region_id")
+    private Long regionId;
 
-    private Long region_id;
+
+    @OneToMany
+    @JoinColumn(name = "location_id")
+    private List<Output> outputList;
 
 }

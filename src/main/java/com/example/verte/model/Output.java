@@ -18,12 +18,18 @@ public class Output {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_output;
-    private Long location;
-    private Long name_of_the_geographical_object;
+    private Long idOutput;
     private String name;
     private String description;
 
+
+    @ManyToOne
+    @JoinColumn(name = "name_of_the_geograp_hical_object_id")
+    private GeographicalObject geographicalObject;
+
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private City city;
 
 
 }

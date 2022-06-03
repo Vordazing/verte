@@ -18,4 +18,11 @@ public class OutputService {
         return this.outputRepository.findAll();
     }
 
+    public void save(Output output) {
+        outputRepository.save(output);
+    }
+
+    public void deleteById(Long id) {
+        outputRepository.deleteById(id);
+    }
 }
