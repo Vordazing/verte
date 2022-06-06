@@ -2,14 +2,14 @@
 <html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Output</title>
+    <title>Russia</title>
 </head>
 <body>
 
     <head>
         <div>
 
-            <form action="/output/new">
+            <form action="/russia/new">
                 <button type="submit">Добавить достопримечательность</button>
             </form>
 
@@ -25,16 +25,16 @@
             <div th:if="${region.cityList.size != 0}">
                 <div th:each="city : ${region.cityList}">
 
-                    <div th:if="${city.outputList.size != 0}">
-                        <div th:each="output : ${city.outputList}">
+                    <div th:if="${city.russiaList.size != 0}">
+                        <div th:each="russia : ${city.russiaList}">
                             <div th:text="${region.regions}"></div>
                             <div th:text="${city.cities}"> </div>
-                            <div th:if="${output.geographicalObject != null}">
-                                 <div th:text="${output.geographicalObject.geographicalObjectList}"></div>
+                            <div th:if="${russia.object != null}">
+                                 <div th:text="${russia.object.objects}"></div>
                             </div>
-                            <div th:text="${output.name}"> </div>
-                            <div th:text="${output.description}"> </div>
-                            <a th:href="@{'/output/' + ${output.idOutput} + '/delete'}"><button type="button">Delete</button></a>
+                            <div th:text="${russia.name}"> </div>
+                            <div th:text="${russia.description}"> </div>
+                            <a th:href="@{'/russia/' + ${russia.idRussia} + '/delete'}"><button type="button">Delete</button></a>
 
                         </div>
                     </div>

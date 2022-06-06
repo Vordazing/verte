@@ -13,22 +13,22 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "output")
-public class Output {
+@Table(name = "russia")
+public class Russia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idOutput;
+    private Long idRussia;
     private String name;
     private String description;
 
 
     @ManyToOne
-    @JoinColumn(name = "name_of_the_geograp_hical_object_id")
-    private GeographicalObject geographicalObject;
+    @JoinColumn(name = "object")
+    private Object object;
 
     @ManyToOne
-    @JoinColumn(name = "location_id")
+    @JoinColumn(name = "location")
     private City city;
 
 

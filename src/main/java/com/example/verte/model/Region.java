@@ -23,7 +23,7 @@ public class Region {
     private String regions;
 
     @OneToMany
-    @JoinColumn(name = "region_id")
+    @JoinColumn(name = "region")
     private List<City> cityList;
 
 }

@@ -6,7 +6,7 @@
     <title>New</title>
 </head>
     <body>
-    <form th:action="@{/output/new}" th:object="${output}" method="post"> <!--output.name или * -->
+    <form th:action="@{/russia/new}" th:object="${russia}" method="post"> <!--output.name или * -->
 
         <label>region:</label>
 
@@ -21,9 +21,9 @@
         </select>
         <br/><br/>
 
-        <label>g:</label>
-        <select name ="geographicalObject">
-            <option th:each="object: ${geographicalObjectList}" th:value = "${object.idGeographicalObject}" th:text="${object.geographicalObjectList}"></option>
+        <label>object:</label>
+        <select name ="object">
+            <option th:each="object: ${objectList}" th:value = "${object.idObject}" th:text="${object.objects}"></option>
         </select>
         <br/><br/>
 
@@ -39,3 +39,4 @@
     </form>
     </body>
 </html>
+

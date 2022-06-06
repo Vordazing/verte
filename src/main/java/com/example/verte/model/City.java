@@ -20,12 +20,12 @@ public class City {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idCity;
     private String cities;
-    @Column(name = "region_id")
-    private Long regionId;
+    @Column(name = "region")
+    private Long region;
 
 
     @OneToMany
-    @JoinColumn(name = "location_id")
-    private List<Output> outputList;
+    @JoinColumn(name = "location")
+    private List<Russia> russiaList;
 
 }

@@ -14,17 +14,17 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "geographical_object")
-public class GeographicalObject {
+@Table(name = "object")
+public class Object {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idGeographicalObject;
-    private String geographicalObjectList;
+    private Long idObject;
+    private String objects;
 
 
     @OneToMany
-    @JoinColumn(name = "name_of_the_geograp_hical_object_id")
-    private List<Output> outputList;
+    @JoinColumn(name = "object")
+    private List<Russia> russiaList;
 
 }
