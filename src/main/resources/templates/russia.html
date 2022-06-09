@@ -2,46 +2,55 @@
 <html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Russia</title>
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cards.css}"/>
 </head>
 <body>
+<div>
+    <img th:src="${'/img/Logo.png'}" style="position: fixed; margin: 25px; width: 50px; height: 50px; z-index: 10" alt="logo">
+</div>
+<div>
+    <a th:href="@{'/russia/new'}" style="position: absolute; right: 0; margin: 25px"><button>Добавить новый объект</button></a>
+</div>
+<section class="cards" style="padding-top: 80px">
+    <th:block th:each="region : ${regionList}">
+        <th:block th:if="${region.cityList.size != 0}">
+            <th:block th:each="city : ${region.cityList}">
+                <th:block th:if="${city.russiaList.size != 0}">
+                    <th:block th:each="russia : ${city.russiaList}">
+                        <article class="card card--1">
+                            <th:block th:if="${russia.object != null}">
+                                <th:block th:switch="${russia.object.objects}">
+                                    <div class="card__img"></div>
+                                    <a href="#" class="card_link">
+                                        <div th:case="'Река'" class="card__img--hover" th:attr="style=${'background-image: url(/img/river.jpg)'}"></div>
+                                        <div th:case="'Озеро'" class="card__img--hover" th:attr="style=${'background-image: url(/img/lake.jpg)'}"></div>
+                                        <div th:case="'Заповедник'" class="card__img--hover" th:attr="style=${'background-image: url(/img/reserve.jpg)'}"></div>
+                                        <div th:case="'Национальный парк'" class="card__img--hover" th:attr="style=${'background-image: url(/img/park.jpg)'}"></div>
+                                        <div th:case="'Гора'" class="card__img--hover" th:attr="style=${'background-image: url(/img/mountain.jpg)'}"></div>
+                                    </a>
+                                </th:block>
 
-    <head>
-        <div>
+                                <div class="card__info">
+                                    <span class="card__category" th:text="${russia.name}"></span>
+                                    <h3 class="card__title" th:text="${russia.description}"></h3>
+                                    <span class="card__by" th:text="${russia.object.objects}"></span><br/>
+                                    <span class="card__by">Россия</span><br/>
+                                    <span class="card__by" th:text="${region.regions}"></span><br/>
+                                    <span class="card__by" th:text="${city.cities}"></span><br/>
+                                    <a class="button" th:href="@{'/russia/' + ${russia.idRussia} + '/delete'}"><button>Удалить</button></a>
+                                </div>
+                            </th:block>
+                        </article>
+                    </th:block>
+                </th:block>
+            </th:block>
+        </th:block>
+    </th:block>
 
-            <form action="/russia/new">
-                <button type="submit">Добавить достопримечательность</button>
-            </form>
+</section>
 
-            <h>Локация</h>
-            <h>Достопримечательность</h>
-            <h>Название</h>
-            <h>Описание</h>
-        <div/>
-    </head>
 
-    <body>
-        <tr th:each="region : ${regionList}">
-            <div th:if="${region.cityList.size != 0}">
-                <div th:each="city : ${region.cityList}">
-
-                    <div th:if="${city.russiaList.size != 0}">
-                        <div th:each="russia : ${city.russiaList}">
-                            <div th:text="${region.regions}"></div>
-                            <div th:text="${city.cities}"> </div>
-                            <div th:if="${russia.object != null}">
-                                 <div th:text="${russia.object.objects}"></div>
-                            </div>
-                            <div th:text="${russia.name}"> </div>
-                            <div th:text="${russia.description}"> </div>
-                            <a th:href="@{'/russia/' + ${russia.idRussia} + '/delete'}"><button type="button">Delete</button></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </tr>
-    </body>
 
 
 </body>

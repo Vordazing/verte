@@ -3,15 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-</head>
-<body>
 
-<div class="container">
-    <h1>
-        Adding Static Resources (css, JavaScript, Images) to Thymeleaf
-    </h1>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/cpc.css}"/>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>-->
+
+    <script rel="stylesheet" type="text/javascript" th:src="@{/webjars/gsap/dist/gsap.js}"></script>
+
+    <!--<script rel="stylesheet" type="text/javascript" th:src="@{/webjars/gsap/all.js}"></script>-->
+
+</head>
+
+<body>
+<div class="page-wrap">
+    <header class="page-header">
+
+        <nav>
+            <h1>Fli Trip | Travel</h1>
+            <ul>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <article id="hero-1" style="--i: 5">
+                <div class="hero-info">
+                    <h2>Путешествуйте по</h2>
+                    <h1>Миру</h1>
+                    <h3>Прагсер-Вильдзее, Италия</h3>
+                </div>
+                <div class="hero-image hi-1"></div>
+            </article>
+
+            <article id="hero-2" style="--i: 4">
+                <div class="hero-info">
+                    <h2>Наслаждайтесь</h2>
+                    <h1>Путешествиями</h1>
+                    <h3>Маринье, Франция</h3>
+                </div>
+                <div class="hero-image hi-2"></div>
+
+            </article>
+
+            <article id="hero-3" style="--i: 3">
+                <div class="hero-info">
+                    <h2>Расширьте Свои</h2>
+                    <h1>Горизонты</h1>
+                    <h3>Трасса Хукер-Вэлли, Новая Зеландия</h3>
+                </div>
+                <div class="hero-image hi-3"></div>
+
+            </article>
+
+            <article id="hero-4" style="--i: 2">
+                <div class="hero-info">
+                    <h2>Исследуйте и</h2>
+                    <h1>Прочувствуйте</h1>
+                    <h3>Дольмиты, Италия</h3>
+                </div>
+                <div class="hero-image hi-4"></div>
+
+            </article>
+
+            <article id="hero-5" style="--i: 1">
+                <div class="hero-info">
+                    <h2>Измените Свои</h2>
+                    <h1>Перспективы</h1>
+                    <h3>Пхукет, Таиланд</h3>
+                </div>
+                <div class="hero-image hi-5"></div>
+            </article>
+        </main>
+
+    </header>
+
+    <section>
+        <ul class="level-1">
+            <li>
+                <h3>Направление</h3>
+                <ul class="level-2">
+                    <li>
+                        <p>Asia</p>
+                        <ul class="level-3">
+                            <li>Абхазия</li>
+                            <li>Азербайджан</li>
+                            <li>Армения</li>
+                            <li>Афганистан</li>
+                            <li>Бангладеш</li>
+                            <li>Бахрейн</li>
+                            <li>Бруней</li>
+                            <li>Бутан</li>
+                            <li>Восточный Тимор</li>
+                            <li>Вьетнам</li>
+                            <li>Грузия</li>
+                            <li>Израиль</li>
+                            <li>Индия</li>
+                            <li>Индонезия</li>
+                            <li>Ирак</li>
+                            <li>Иран</li>
+                            <li>Йемен</li>
+                            <li>Казахстан</li>
+                            <li>Камбоджа</li>
+                            <li>Катар</li>
+                            <li>Кипр</li>
+                            <li>Киргизия</li>
+                            <li>Китай</li>
+                            <li>Кувейт</li>
+                            <li>Лаос</li>
+                            <li>Ливан</li>
+                            <li>Иордания</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Europe</p>
+                        <ul class="level-3">
+                            <li><a href="/russia"  > Россия </a></li>
+                            <li>Австрия</li>
+                            <li>Аландские острова</li>
+                            <li>Албания</li>
+                            <li>Андорра</li>
+                            <li>Беларусь</li>
+                            <li>Бельгия</li>
+                            <li>Болгария</li>
+                            <li>Босния и Герцеговина</li>
+                            <li>Ватикан</li>
+                            <li>Великобритания</li>
+                            <li>Венгрия</li>
+                            <li>Германия</li>
+                            <li>Греция</li>
+                            <li>Дания</li>
+                            <li>Ирландия</li>
+                            <li>Исландия</li>
+                            <li>Испания</li>
+                            <li>Италия</li>
+                            <li>Косово</li>
+                            <li>Латвия</li>
+                            <li>Литва</li>
+                            <li>Лихтенштейн</li>
+                            <li>Люксембург</li>
+                            <li>Македония</li>
+                            <li>Мальта</li>
+                            <li>Молдова</li>
+                            <li>Монако</li>
+                            <li>Нидерланды</li>
+                            <li>Польша</li>
+                            <li>Португалия</li>
+                            <li>Румыния</li>
+                            <li>Сан-Марино</li>
+                            <li>Сербия</li>
+                            <li>Словакия</li>
+                            <li>Словения</li>
+                            <li>Украина</li>
+                            <li>Финляндия</li>
+                            <li>Франция</li>
+                            <li>Хорватия</li>
+                            <li>Черногория</li>
+                            <li>Чехия</li>
+                            <li>Швейцария</li>
+                            <li>Швеция</li>
+                            <li>Шпицберген и Ян-Майен</li>
+                            <li>Эстония</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Africa</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                            <li>Text</li>
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>North America</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>South America</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Australia</p>
+                        <ul class="level-3">
+                            <li>Text</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3>Советы путешественникам</h3>
+                <ul>
+                    <li>Совет 1</li>
+                    <li>Совет 2</li>
+                    <li>Совет 3</li>
+                    <li>Совет 4</li>
+                    <li>Совет 5</li>
+                </ul>
+                <p><small>Больше советов...</small></p>
+            </li>
+            <li>
+                <h3>Ресурсы</h3>
+                <ul>
+                    <li>Личный кабинет </li>
+                    <li>Добавить место</li>
+                    <li>Ресурсы 3 </li>
+                </ul>
+                <p><small>Больше ресурсов...</small></p>
+            </li>
+            <li>
+                <h3>О нас</h3>
+                <ul>
+                    <li><a href="/team"  > Team </a> </li>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Telegram</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
 </div>
+
+<script rel="stylesheet" type="text/javascript" th:src="@{/js/cpc.js}"></script>
 
 </body>
 </html>

@@ -1,22 +1,19 @@
 package com.example.verte.Controller;
 
+import com.example.verte.service.RegionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
-
-
 
     @GetMapping("/")
     public String home() {
         return "home";
     }
 
-    @GetMapping("/write")
-    public String write() {
-        return "write";
-    }
 
     @GetMapping("/error")
     public String error() {
@@ -28,9 +25,9 @@ public class HomeController {
         return "team";
     }
 
-    @GetMapping("/cpc")
+    @GetMapping("/home")
     public String cpc() {
-        return "cpc";
+        return "home";
     }
 }
 
