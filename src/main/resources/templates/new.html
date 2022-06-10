@@ -8,34 +8,34 @@
     <body>
     <form th:action="@{/russia/new}" th:object="${russia}" method="post"> <!--output.name или * -->
 
-        <label>region:</label>
+        <!--<label>region:</label>
 
         <select name ="Region">
             <option th:each="region: ${regionList}" th:value = "${region.idRegion}" th:text="${region.regions}"></option>
         </select>
-        <br/><br/>
+        <br/><br/>-->
 
-        <label>city:</label>
+        <label>Введите город:</label>
         <select name ="City">
             <option th:each="city: ${cityList}" th:value = "${city.idCity}" th:text="${city.cities}"></option>
         </select>
         <br/><br/>
 
-        <label>object:</label>
+        <label>Введите географический объект:</label>
         <select name ="object">
             <option th:each="object: ${objectList}" th:value = "${object.idObject}" th:text="${object.objects}"></option>
         </select>
         <br/><br/>
 
-        <label>name:</label>
+        <label>Введите имя:</label>
         <input type="text"  th:field="*{name}">
         <br/><br/>
 
-        <label>description:</label>
+        <label>Введите описание :</label>
         <input type="text" th:field="*{description}">
         <br/><br/>
 
-        <button type="submit">ADD</button>
+        <button type="submit">Добавить</button>
     </form>
     </body>
 </html>
